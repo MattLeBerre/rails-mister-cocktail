@@ -79,7 +79,9 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
-  database: rails-mister-cocktail_production
-  username: rails-mister-cocktail
-  password: <%= ENV['RAILS-MISTER-COCKTAIL_DATABASE_PASSWORD'] %>
+adapter: encoding: poll: host: port: database: username: password:
+postgresql
+utf8
+10
+<%= ENV['POSTGRESQL_ADDON_HOST'] %> <%= ENV['POSTGRESQL_ADDON_PORT'] %> <%= ENV['POSTGRESQL_ADDON_DB'] %>
+<%= ENV['POSTGRESQL_ADDON_USER'] %> <%= ENV['POSTGRESQL_ADDON_PASSWORD'] %>
