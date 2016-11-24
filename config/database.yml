@@ -79,9 +79,11 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-adapter: encoding: poll: host: port: database: username: password:
-postgresql
-utf8
-10
-<%= ENV['POSTGRESQL_ADDON_HOST'] %> <%= ENV['POSTGRESQL_ADDON_PORT'] %> <%= ENV['POSTGRESQL_ADDON_DB'] %>
-<%= ENV['POSTGRESQL_ADDON_USER'] %> <%= ENV['POSTGRESQL_ADDON_PASSWORD'] %>
+  adapter:        postgresql
+  encoding:       utf8
+  poll:            10
+  host:           <%= ENV['POSTGRESQL_ADDON_HOST'] %>
+  port:           <%= ENV['POSTGRESQL_ADDON_PORT'] %>
+  database:       <%= ENV['POSTGRESQL_ADDON_DB'] %>
+  username:       <%= ENV['POSTGRESQL_ADDON_USER'] %>
+  password:       <%= ENV['POSTGRESQL_ADDON_PASSWORD'] %>
